@@ -81,16 +81,7 @@ class UsersController < ApplicationController
     end
   end
 
-
-  #Custom Controller Methods
-  def login
-    @user = User.find(params[:id])
-    sign_in(@user)
-    redirect_to :action => "index"
-  end
-
   def logout
-    sign_out
-    redirect_to :action => "index"
+    CASClient::Frameworks::Rails::Filter.logout(self)
   end
 end

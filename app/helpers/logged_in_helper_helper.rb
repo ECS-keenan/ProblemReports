@@ -1,15 +1,5 @@
 module LoggedInHelperHelper
-	ECS_LOGIN_KEY = :ecs_key
-
-	def sign_in(user)
-		self.current_user = user
-		session[ECS_LOGIN_KEY] = user.ecs_id
-	end
-
-	def sign_out
-		self.current_user = nil
-		session[ECS_LOGIN_KEY] = nil
-	end
+	ECS_LOGIN_KEY = :cas_user
 
 	def current_user=(user)
 		@current_user = user;

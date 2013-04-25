@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 	include LoggedInHelperHelper
+    before_filter CASClient::Frameworks::Rails::Filter
   	protect_from_forgery
 
     def authenticate

@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ProblemReport</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <%= yield(:head) %>
-</head>
-<body>
 	<div id="content">
 		<div class="banner box-shadow">
 			<h1>Problem Reports (Auth)</h1>
@@ -22,5 +12,4 @@
 		<%= yield %>
 	</div>
 
-</body>
-</html>
+<%= render_parent_layout %>
